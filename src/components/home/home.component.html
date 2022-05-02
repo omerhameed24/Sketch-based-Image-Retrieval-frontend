@@ -1,0 +1,47 @@
+<div style="padding-right: 40px; padding-left: 40px; padding-top: 5%; color: whitesmoke">
+    <h1 style='text-align: center;'>Sketch Based Image Retrieval System</h1>
+    <hr style='width:35%; margin:0 auto;'>
+    <h4 style='text-align: center;'>Click on the "Choose File" button to upload a file OR Draw a sketch below</h4>
+    <div class="row" style="padding-top: 5%;">
+        <div class="select-file">
+                <label>Select File (only image or pdf)</label>
+                <div>                            
+                    <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
+                </div>
+        </div>
+        <div class="or">OR </div>
+        <div #screen class="sketch-container">
+            <div id="sketch-holder"></div>
+            <button type="button" class="btn btn-dark" (click)="Clear()">Clear Sketch</button>
+            <button type="button" class="btn btn-dark" (click)="Capture()" style="margin-left: 10px;">Capture</button>
+        </div>
+
+        <div class="col-sm-2 medium">
+            <button *ngIf="!this.Loading && !this.Refresh" type="button" class="btn btn-success" (click)="Process()" style="font-size: 20px;">Process</button>
+            <button *ngIf="this.Refresh" type="button" class="btn btn-info" (click)="_Refresh()">Retry</button>
+            <div class="spinner">
+                <mat-spinner [diameter]="35" *ngIf="this.Loading"></mat-spinner>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="column">
+                <div class="left">
+                    <div *ngIf="!this.Result">
+                        <img src="./../assets/photo.png">
+                    </div>
+                    <div *ngIf="this.Result">
+                        <div *ngFor="let image of images">
+                            <img class="image-container" [src]="image">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="download">
+    <img #canvas>
+    <a #downloadLink></a>
+</div>

@@ -1,0 +1,9 @@
+.flex-container
+{
+    display: flex;
+}
+
+.navbar
+{
+    position: fixed;
+}

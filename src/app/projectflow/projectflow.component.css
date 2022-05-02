@@ -1,0 +1,128 @@
+
+
+
+/* Steps Page  */
+div.stepsTopHeader{
+	padding-left: 20px;
+	padding-top: 5%;
+	color: white;
+	height: 250px;
+	background:  linear-gradient(99.26deg, #F63E3E 12.34%, #FFBC3A 190.28%);
+}
+div.stepsHeading{
+	padding-left: 10%;
+	
+}
+div.container.steps-container{
+	margin-top: 30px;
+	padding: 50px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.18);
+	border-radius: 10px;
+}
+.container-fluid {
+    width: 100%; 
+    padding-right: 0px; 
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.card-steps{
+	position: relative;
+	box-shadow: -2px 6px 12px rgba(0, 0, 0, 0.12);
+	border:none;
+	transition: all 0.4s;
+	
+	padding: 8px;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: center;
+}
+.card-steps:hover{
+	box-shadow: 2px 3px 15px #999;
+	transform: translateY(-1px);
+	
+	padding: 8px;
+	margin: 5px;
+	text-align: center;
+}
+
+.h4, h4.card-steps-heading{
+	margin-top: 15px;
+	font-size: 18px;
+	color: black;
+}
+
+div.steps-count{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: blue;
+	text-align: center;
+	vertical-align: middle;
+}
+button.step-btn{
+	padding: 11px 20px;
+	/* background-color: blue; */
+	border-radius: 50%;
+	border:none;
+	color: white;
+	background: linear-gradient(84.51deg,  #F63E3E 11.48%, #FF7F50 106.24%);
+}
+img.arrow1-steps{
+	position: absolute;
+	bottom: 2px;
+
+}
+P{
+	color: black;
+}
+
+
+img.arrow2-steps{
+position: absolute;
+	bottom: 70px;
+}
+
+
+@media (max-width: 1000px) and (min-width: 767px){
+div.container.steps-container{
+	margin-top: 30px;
+	padding: 10px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.18);
+	border-radius: 10px;
+}
+}
+
+
+
+@media (max-width: 768px){
+
+div.stepsHeading h1{
+	font-size: 25px;
+	padding-left:  20px;
+
+	padding-top: 5%;
+}
+div.stepsTopHeader{
+	height: 200px;
+}
+
+img.arrow1-steps{
+	display: none;
+
+}
+
+
+img.arrow2-steps{
+	display: none;
+}
+
+}
+
+
+
+/* Steps Page Ends */
+
+
